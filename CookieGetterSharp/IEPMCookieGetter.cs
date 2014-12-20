@@ -96,9 +96,9 @@ namespace Hal.CookieGetterSharp {
                             cookie.Name = chunks[0].Trim();
                             cookie.Value = chunks[1].Trim();
                             cookie.Domain = AddDotDomain(url.Host);
-                            cookie.Path = url.Segments[0];	// このほうがいいきがする 2011-11-19
+                            cookie.Path = url.Segments[0];    // このほうがいいきがする 2011-11-19
                             // cookie.Path = url.AbsolutePath;
-                            cookie.Expires = DateTime.Now.AddDays(30);	// 有効期限適当付与 2013-07-03
+                            cookie.Expires = DateTime.Now.AddDays(30);    // 有効期限適当付与 2013-07-03
                             cookies.Add(cookie);
                         }
                         catch(System.Net.CookieException e) {

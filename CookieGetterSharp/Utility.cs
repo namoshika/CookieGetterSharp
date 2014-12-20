@@ -99,7 +99,7 @@ namespace Hal.CookieGetterSharp {
         /// <returns></returns>
         public static string GetTempFilePath() {
             string uniqueString = Guid.NewGuid().ToString() + (System.Environment.TickCount & int.MaxValue).ToString();
-            //	string applicationPath = System.IO.Path.GetDirectoryName(System.Windows.Forms.Application.ExecutablePath);
+            //    string applicationPath = System.IO.Path.GetDirectoryName(System.Windows.Forms.Application.ExecutablePath);
             string roamingPath = System.IO.Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "CookieGetterSharp");
             if(!System.IO.Directory.Exists(roamingPath)) System.IO.Directory.CreateDirectory(roamingPath);
             string uniquePath = System.IO.Path.Combine(roamingPath, md5(uniqueString));
