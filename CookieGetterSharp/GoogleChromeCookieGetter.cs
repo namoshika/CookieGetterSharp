@@ -71,8 +71,9 @@ namespace Hal.CookieGetterSharp
 
             try {
                 long exp = long.Parse(data[4].ToString());
-                // クッキー有効期限が正確に取得されていなかったので修正
-                cookie.Expires = Utility.UnixTimeToDateTime((int)((long)(exp / 1000000) - 11644473600));
+                cookie.Expires = exp == 0
+                    ? DateTime.MinValue
+                    : Utility.UnixTimeToDateTime((int)(exp / 1000000 - 11644473600));
             } catch (Exception ex) {
                 throw new CookieGetterException("GoogleChromeのexpires変換に失敗しました", ex);
             }
