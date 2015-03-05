@@ -57,8 +57,13 @@ namespace Hal.CookieGetterSharp
                 string[] path = Directory.GetDirectories(folder);
                 for(int i = 0;i < path.Length;i++) {
                     if(Path.GetFileName(path[i]).StartsWith(ProfileFolderStarts, StringComparison.OrdinalIgnoreCase)) {
-                        if(File.Exists(Path.Combine(path[i], COOKEFILE_NAME))) {
-                            profiles.Add(path[i]);
+                        String profileDefaultFolder = Path.Combine(path[i], DefaultFolder);
+                        if (Directory.Exists(profileDefaultFolder))
+                        {
+                            if (File.Exists(Path.Combine(profileDefaultFolder, COOKEFILE_NAME)))
+                            {
+                                profiles.Add(profileDefaultFolder);
+                            }
                         }
                     }
                 }
@@ -72,7 +77,7 @@ namespace Hal.CookieGetterSharp
             string path = null;
 
             if(prof != null) {
-                name += " " + Path.GetFileName(prof);
+                name += " " + Directory.GetParent(prof).Name;
                 path = System.IO.Path.Combine(prof, COOKEFILE_NAME);
             }
 

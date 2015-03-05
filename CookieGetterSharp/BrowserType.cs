@@ -143,6 +143,11 @@ namespace Hal.CookieGetterSharp
         /// <summary>
         /// Tungsten
         /// </summary>
-        TungstenBlink
+        TungstenBlink,
+
+        /// <summary>
+        /// ChromeCanary
+        /// </summary>
+        ChromeCanary
     }
 }

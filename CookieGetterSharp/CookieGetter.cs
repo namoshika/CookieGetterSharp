@@ -42,7 +42,8 @@ namespace Hal.CookieGetterSharp {
                 new CoolNovoBrowserManager(),
                 //new RockMeltBrowserManager(),
                 new MaxthonBrowserManager(),
-                new TungstenBrowserManager()
+                new TungstenBrowserManager(),
+                new ChromeCanaryBrowserManager(),
             };
         }
 

@@ -122,6 +122,7 @@
     <Compile Include="FirefoxBrowserManager.cs" />
     <Compile Include="FirefoxCookieGetter.cs" />
     <Compile Include="FirefoxProfile.cs" />
+    <Compile Include="ChromeCanaryBrowserManager.cs" />
     <Compile Include="GoogleChromeBrowserManager.cs" />
     <Compile Include="GoogleChromeCookieGetter.cs" />
     <Compile Include="IBrowserManager.cs" />

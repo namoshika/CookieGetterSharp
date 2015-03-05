@@ -5,10 +5,10 @@ using System.IO;
 
 namespace Hal.CookieGetterSharp
 {
-    class GoogleChromeBrowserManager : IBrowserManager
+    class ChromeCanaryBrowserManager : IBrowserManager
     {
         // プロファイル対応 4/26
-        private readonly string DATAFOLDER = "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\";
+        private readonly string DATAFOLDER = "%LOCALAPPDATA%\\Google\\Chrome SxS\\User Data\\";
         private readonly string DefaultFolder = "Default";
         private readonly string ProfileFolderStarts = "Profile";
         private readonly string COOKEFILE_NAME = "Cookies";
@@ -17,7 +17,7 @@ namespace Hal.CookieGetterSharp
 
         public BrowserType BrowserType
         {
-            get { return BrowserType.GoogleChrome; }
+            get { return BrowserType.ChromeCanary; }
         }
 
         public ICookieGetter CreateDefaultCookieGetter()
