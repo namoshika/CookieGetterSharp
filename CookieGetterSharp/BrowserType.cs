@@ -143,6 +143,16 @@ namespace Hal.CookieGetterSharp
         /// <summary>
         /// Tungsten
         /// </summary>
-        TungstenBlink
+        TungstenBlink,
+
+        /*=====================================
+         * 追加要素に関しては、
+         * 本家が対応ブラウザを増やした時に列挙型の番号がかぶると
+         * 分かりづらい不具合につながるため、被りにくい番号にした。
+         *=====================================*/
+        /// <summary>
+        /// ChromeCanary
+        /// </summary>
+        ChromeCanary = int.MaxValue,
     }
 }
